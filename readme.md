@@ -9,8 +9,6 @@ This project implements a simple REST API for managing items. It provides endpoi
 - Jest (for testing)
 - Supertest (for testing)
 
-# Express Shopping App
-
 ## Overview
 
 **Purpose:** Manage a shopping list through CRUD operations on items.  
@@ -34,17 +32,7 @@ This project implements a simple REST API for managing items. It provides endpoi
 4. **Update an item:** `/items/:name` (PATCH) - Modify existing item properties.
 5. **Delete an item:** `/items/:name` (DELETE) - Remove an item.
 
-## Error Handling
-
-- `ExpressError` class for standardized messages and status codes.
-- Global error handler logs errors and sends informative responses.
-
-## Tests
-
-- Unit tests cover various edge cases and scenarios for each endpoint.
-- Supertest simulates requests and verifies responses.
-
-## Getting Started
+### Getting Started
 
 1. Run `npm install`.
 2. Start the server: `node server.js`.
@@ -83,6 +71,16 @@ This project implements a simple REST API for managing items. It provides endpoi
 - **URL**: `/items/:name`
 - **Method**: `DELETE`
 - **Response**: Returns a message indicating the item has been removed.
+
+## Error Handling
+
+- `ExpressError` class for standardized messages and status codes.
+- Global error handler logs errors and sends informative responses.
+
+## Tests
+
+- Unit tests cover various edge cases and scenarios for each endpoint.
+- Supertest simulates requests and verifies responses.
 
 ## Testing
 
