@@ -9,41 +9,46 @@ This project implements a simple REST API for managing items. It provides endpoi
 - Jest (for testing)
 - Supertest (for testing)
 
-## Project Structure
+# Express Shopping App
 
-The project consists of the following files and directories:
+## Overview
 
-- **app.js**: Entry point of the application. Initializes the Express app and sets up middleware.
-- **itemRoutes.js**: Defines the routes for handling item-related operations such as adding, retrieving, updating, and deleting items.
-- **fakeDb.js**: Contains a fake in-memory database (`global.items`) to store items.
-- **ExpressError.js**: Custom error class to handle Express errors.
-- **tests**: Directory containing test files for testing the API endpoints.
-- **server.js**: Starts the Express server.
+**Purpose:** Manage a shopping list through CRUD operations on items.  
+**Technology Stack:** Node.js, Express, Supertest (testing)  
+**Data Storage:** In-memory array (fakeDb.js) for simplicity. Consider persistent storage options for production.
 
-## Installation
+## Files
 
-1. Clone the repository:
+- **app.js:** Main entry point, defines routes and error handling.
+- **itemRoutes.js:** CRUD functions for items.
+- **fakeDb.js:** In-memory array to store items.
+- **expressError.js:** Custom error class for consistent handling.
+- **tests:** Folder containing unit tests for various functionalities.
+- **server.js:** Starts the server and listens on port 3000.
 
-```bash
-git clone <https://github.com/samiesmilz/express_shopping_list_api.git>
-cd <express_shopping_list_api>
-```
+## Functionalities
 
-2. Install dependencies:
+1. **Get all items:** `/items` (GET) - Retrieve all items.
+2. **Get a specific item:** `/items/:name` (GET) - Retrieve details by name.
+3. **Create a new item:** `/items` (POST) - Add a new item.
+4. **Update an item:** `/items/:name` (PATCH) - Modify existing item properties.
+5. **Delete an item:** `/items/:name` (DELETE) - Remove an item.
 
-```bash
-npm install
-```
+## Error Handling
 
-## Usage
+- `ExpressError` class for standardized messages and status codes.
+- Global error handler logs errors and sends informative responses.
 
-1. Start the server:
+## Tests
 
-```bash
-node server.js
-```
+- Unit tests cover various edge cases and scenarios for each endpoint.
+- Supertest simulates requests and verifies responses.
 
-2. The server will start running at `http://localhost:3000`.
+## Getting Started
+
+1. Run `npm install`.
+2. Start the server: `node server.js`.
+3. Access the app at http://localhost:3000.
 
 ## API Endpoints
 
@@ -84,10 +89,15 @@ node server.js
 To run the tests, execute:
 
 ```bash
-npm test
+jest
 ```
 
-This will run all the tests defined in the `tests` directory.
+## Further Enhancements
+
+- Implement authentication and authorization.
+- Integrate with a persistent database.
+- Add features like price comparison, filtering, search.
+- Consider user interface development.
 
 ## License
 
