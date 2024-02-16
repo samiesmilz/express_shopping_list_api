@@ -1,4 +1,3 @@
-````markdown
 # Express Shopping App API
 
 This project implements a simple REST API for managing items. It provides endpoints for adding, retrieving, updating, and deleting items.
@@ -26,10 +25,9 @@ The project consists of the following files and directories:
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
-cd <repository-name>
+git clone <https://github.com/samiesmilz/express_shopping_list_api.git>
+cd <express_shopping_list_api>
 ```
-````
 
 2. Install dependencies:
 
